@@ -134,11 +134,33 @@ skrivit bra tester i steg ett kommer de skydda dig när det blir svårt.
 
 ### Lab 4
 
-Skapa en funktionalitet som läser en fil, behandlar den på något vis
-och sedan skriver den till en databas.
+Skapa funktionalitet som läser en fil innehållande fordon
+från resources-foldern, räknar ut försäkringspremien enligt 
+följande regler och sedan skriver resultatet till en SQL-databas.
 
-TBD!
+Filen är på följande format:
 
+    <regnr>;<märke>;<modell>;<tillverkningsår>;<nypris>;<condition>
+
+En testfil finns i src/test/resources/cars.txt.
+
+Databasschemat är följande:
+
+    CREATE TABLE InsurancePremium(licensePlate char(6), insurancePremium int);
+
+Filen ska behandlas enligt enligt följande krav:
+
+- Premien är 1% av nypriset
+- Premien minskar med 20% för varje år efter tillverkningsåret
+- Premien för märke "Mercedes" är 500 högre än annars
+- Premien är aldrig mindre än 3000
+
+Tips:
+
+- Det finns en färdig DB-klient i klassen DatabaseClient
+- Det finns en färdig setup med en in memory-db i klassen DatabaseClientTest
+- Det finns en färdig metod för att läsa filer i klassen FileReadingUtility
+    
 ## Kontraktstestning
 
 - Del av komponenten man testar (t.ex JUnit)

@@ -1,0 +1,2 @@
+GRJ558;Mercedes;sl;2011;745000;mint
+HEF934;Volvo;v70;2014;395000;used
