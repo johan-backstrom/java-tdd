@@ -1,4 +1,6 @@
-package se.claremont;
+package se.claremont.util;
+
+import se.claremont.tdd.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +8,7 @@ import java.util.Scanner;
 
 public class FileReadingUtility {
 
-    public static List<String> readFileLinesFromResources(String filename){
+    public static List<String> readFileLinesFromResources(String filename) {
         Scanner fileScanner = new Scanner(
                 FileReadingUtility.class
                         .getClassLoader()
@@ -15,7 +17,7 @@ public class FileReadingUtility {
 
         List<String> fileRows = new ArrayList<>();
 
-        while(fileScanner.hasNextLine()){
+        while (fileScanner.hasNextLine()) {
             fileRows.add(fileScanner.nextLine());
         }
 

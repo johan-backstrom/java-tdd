@@ -1,4 +1,4 @@
-package se.claremont;
+package se.claremont.util;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package se.claremont;
+package se.claremont.rest;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.mashape.unirest.http.ObjectMapper;
@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class RestClientSetup {
 
-    public static void setupUnirest(){
+    public static void setupUnirest() {
         Unirest.setDefaultHeader("Content-Type", "application/json");
         Unirest.setObjectMapper(
                 new ObjectMapper() {

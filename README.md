@@ -87,7 +87,7 @@ Utveckling av en nya funktioner sker genom följande steg:
 2. Kör testet. Om funktionen inte är implementerad ska testet vara rött.
 3. Implementera funktionaliteten
 4. Kör testet. Det ska vara grönt.
-5. Refakturisera koden
+5. Refaktorisera koden
 6. Upprepa
 
 https://upload.wikimedia.org/wikipedia/commons/0/0b/TDD_Global_Lifecycle.png
@@ -128,8 +128,10 @@ skrivit bra tester i steg ett kommer de skydda dig när det blir svårt.
 
 ## Unit testing av komplex funktionalitet och beroenden
 
-- Dependency injection-ish
+Introduktion:
+
 - Mockning
+- Dependency injection-ish
 - In memory DB (t.ex. H2)
 
 ### Lab 4
@@ -186,7 +188,7 @@ ut från systemet.
 ### Lab 5
 
 - Skriv test som gör en delete i petstore.
-- Skriv test som uppdaterar ett befintligt test.
+- Skriv test som uppdaterar ett befintligt pet.
 
 Hint: Tänk på de övergripande test-stegen! given-when-then
 

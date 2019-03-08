@@ -1,7 +1,8 @@
-package se.claremont;
+package se.claremont.util;
 
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
+import se.claremont.tdd.VehiclePremium;
 
 import java.util.List;
 
