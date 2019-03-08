@@ -94,7 +94,7 @@ https://upload.wikimedia.org/wikipedia/commons/0/0b/TDD_Global_Lifecycle.png
 
 ### Demo
 
-Bygga en kalkulator med TDD.
+Bygga en kalkylator med TDD.
 
 ### Lab 2
 
@@ -202,7 +202,7 @@ Introduktion till abstraktioner för testning.
 ### Demo
 
 Skriv om det första testet i petstore med en abstraktion för SUT.
-Skriv om "testdatat" tillatt vara en abstraktion.
+Skriv om "testdatat" till att vara en abstraktion.
 
 ### Lab 6
 
