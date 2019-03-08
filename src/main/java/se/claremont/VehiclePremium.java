@@ -1,4 +1,4 @@
-package se.claremont.tdd;
+package se.claremont;
 
 public class VehiclePremium {
 

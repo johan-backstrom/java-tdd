@@ -1,25 +1,15 @@
 # Välkomna till Testforum med tema TDD
 
-## Förberedelser
+## Förberedelser och förkunskaper
 
 - En IDE som Intellij, NetBeans eller Eclipse
 - Klona detta repo och öppna det i vald IDE
+- Grundläggande kunskaper i unit-testing-verktyg som JUnit eller NUnit.
+- Grundläggande kunskaper i objektorienterad programmering (Java eller C#)
 
-#Agenda
+# Agenda
 
 ## Introduktion till testautomation
-
-### Metodik
-
-- Precondition (given)
-- Execution (when)
-- Assertion (then)
-
-### Nivåer
-
-- Unit-testning
-- Kontraktstester
-- Integrations och systemtest
 
 ### Viktiga egenskaper för tester
 
@@ -33,25 +23,7 @@ Tester ska helst förlita sig på de gränssnitt som de testar och
 inte behöva ge sig ner i implementationsdetaljer vilket försvårar
 refaktorisering.
 
-### Maven
-
-- Dependency management tool
-- Build tool
-
-### JUnit
-
-- @Test
-- @Before
-- @After
-- @BeforeClass
-- @AfterClass
-- Assert
-
 ## Unit-testning
-
-Unit-tester anropar enskilda metoder och validerar implementationen
-av logik. Väl skrivna unit-tester kan till och med anses vara en
-dokumentation eller specifikation för hur koden ska fungera.
 
 Unit-tester ska vara snabba! Testsviter som tar mer än 1 min 
 kommer inte köras så ofta som de borde.
@@ -98,7 +70,7 @@ Bygga en kalkylator med TDD.
 
 ### Lab 2
 
-Implementera metoden getVehicleValue i Vehicle-klassen med hjälp av TDD. 
+Implementera metoden calculateVehicleValue i Vehicle-klassen med hjälp av TDD. 
 Den ska uppfylla följande krav:
 
 - Bilen är värd 90% av sitt nypris
@@ -112,21 +84,8 @@ Den ska uppfylla följande krav:
   - Lamborghini + 10000 kr
 - Värdet kan aldrig vara mindre än 0
 
-### Lab 3
 
-Skapa en metod som tar två integers som argument och 
-returnerar en lista med alla primtal mellan dessa två tal.
-
-Krav:
-
-- Primtal är endast delbara med sig själv och 1
-- Primtal är heltal
-- Primtal är större än 1
-
-Refaktorisera lösningen så att metoden blir rekursiv. Har du 
-skrivit bra tester i steg ett kommer de skydda dig när det blir svårt.
-
-## Unit testing av komplex funktionalitet och beroenden
+## TDD och unit testning av komplex funktionalitet och beroenden
 
 Introduktion:
 
@@ -134,7 +93,7 @@ Introduktion:
 - Dependency injection-ish
 - In memory DB (t.ex. H2)
 
-### Lab 4
+### Lab 3
 
 Skapa funktionalitet som läser en fil innehållande fordon
 från resources-foldern, räknar ut försäkringspremien enligt 
@@ -163,36 +122,7 @@ Tips:
 - Det finns en färdig setup med en in memory-db i klassen DatabaseClientTest
 - Det finns en färdig metod för att läsa filer i klassen FileReadingUtility
     
-## Kontraktstestning
-
-- Del av komponenten man testar (t.ex JUnit)
-- verktyg som till exempel "Pact": https://docs.pact.io/
-
-## Integrations och systemtestning
-
-Testar hela eller delar av systemet genom de gränssnitt som exponeras
-ut från systemet.
-
-### HTTP och REST
-
-- Introduktion till HTTP
-- Introduktion till REST
-- Postman + Swagger petstore
-
-### Demo
-
-- Skapa och hämta ett pet från swagger petstore med postman.
-- Skapa och hämta ett pet från java-kod (vi använder unitest i detta exempel).
-- Hämta data som strängar och/eller objekt
-
-### Lab 5
-
-- Skriv test som gör en delete i petstore.
-- Skriv test som uppdaterar ett befintligt pet.
-
-Hint: Tänk på de övergripande test-stegen! given-when-then
-
-### Testabstraktioner
+## Testabstraktioner
 
 Introduktion till abstraktioner för testning.
 
@@ -201,10 +131,9 @@ Introduktion till abstraktioner för testning.
 
 ### Demo
 
-Skriv om det första testet i petstore med en abstraktion för SUT.
-Skriv om "testdatat" till att vara en abstraktion.
+Skriv om "testdatat" till att vara en abstraktion i vehicle-testerna.
 
-### Lab 6
+### Lab 4
 
-Skriv om alla petstore-tester till att använda abstraktioner för
-testdata och SUT.
+Skriv om alla vehicle-tester till att använda abstraktioner för
+testdata.

@@ -1,9 +1,10 @@
-package se.claremont.tdd;
+package se.claremont;
 
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import se.claremont.VehiclePremium;
 import se.claremont.util.DatabaseClient;
 
 public class DatabaseClientTest {
@@ -36,6 +37,7 @@ public class DatabaseClientTest {
         VehiclePremium vp = new VehiclePremium();
         vp.setLicensePlate("ABC123");
         vp.setInsurancePremium(1500);
+
         databaseClient.executeStatement(
                 "INSERT INTO InsurancePremium VALUES ('ABC123', 666);"
         );
