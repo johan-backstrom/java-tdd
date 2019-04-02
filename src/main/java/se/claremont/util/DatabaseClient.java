@@ -1,28 +1,25 @@
 package se.claremont.util;
 
-import org.sql2o.Connection;
-import org.sql2o.Sql2o;
+import se.claremont.VehiclePremium;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DatabaseClient {
 
-    Sql2o sql2o;
+    private static Map<String, Integer> theFakeDatabase = new HashMap<>();
 
-    public DatabaseClient(String url, String username, String password){
-        sql2o = new Sql2o(url, username, password);
+    public static void writeToDatabase(VehiclePremium v) {
+        theFakeDatabase.put(v.getLicensePlate(), v.getInsurancePremium());
     }
 
-    public <T> List<T> select(String sql, Class<T> clazz){
-
-        try (Connection con = sql2o.open()) {
-            return con.createQuery(sql).executeAndFetch(clazz);
+    public static VehiclePremium getFromDatabase(String licensePlate) {
+        if(!theFakeDatabase.containsKey(licensePlate)){
+            throw new RuntimeException("PremiumNotFound");
         }
+        return new VehiclePremium()
+                .setLicensePlate(licensePlate)
+                .setInsurancePremium(theFakeDatabase.get(licensePlate));
     }
 
-    public void executeStatement(String sql){
-        try (Connection con = sql2o.open()) {
-            con.createQuery(sql).executeUpdate();
-        }
-    }
 }
