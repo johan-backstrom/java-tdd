@@ -95,6 +95,11 @@ Introduktion:
 
 ### Lab 3
 
+!!! Viktigt:
+
+Förklara hur man ska bryta ner. "new" leder fel...
+
+
 Skapa funktionalitet som läser en fil innehållande fordon
 från resources-foldern, räknar ut försäkringspremien enligt 
 följande regler och sedan skriver resultatet till en SQL-databas.
@@ -105,9 +110,8 @@ Filen är på följande format:
 
 En testfil finns i src/test/resources/cars.txt.
 
-Databasschemat är följande:
-
-    CREATE TABLE InsurancePremium(licensePlate char(6), insurancePremium int);
+Vi har en fejkad databas där man kan persistera VehiclePrmium-objekt och 
+som man interagerar med genom klassen DatabaseClient.
 
 Filen ska behandlas enligt enligt följande krav:
 
@@ -119,8 +123,9 @@ Filen ska behandlas enligt enligt följande krav:
 Tips:
 
 - Det finns en färdig DB-klient i klassen DatabaseClient
-- Det finns en färdig setup med en in memory-db i klassen DatabaseClientTest
 - Det finns en färdig metod för att läsa filer i klassen FileReadingUtility
+- Dela upp de olika stegen i olika metoder
+- "new" är djävulens påfund! :-)
     
 ## Testabstraktioner
 

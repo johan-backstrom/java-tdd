@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class FileReadingUtility {
 
     public static List<String> readFileLinesFromResources(String filename) {
+
         Scanner fileScanner = new Scanner(
                 FileReadingUtility.class
                         .getClassLoader()
